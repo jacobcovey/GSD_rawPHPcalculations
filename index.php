@@ -16,8 +16,8 @@ and open the template in the editor.
         $salaryGrothRate = .06;
         $originalDebt = 32000;
         $originalIntrestRate = .0621;
-        $monthlyLivingExpense = 2200;
-        $livingExpenseGrowthRate = .065;
+        $monthlyLivingExpense = 2800;
+        $livingExpenseGrowthRate = .06;
         $years = 40;
         
         
@@ -37,10 +37,10 @@ and open the template in the editor.
             $basicDecison->updateLivingExpenses();
             $basicDecison->calcTaxObligation();
             
-            echo "Year " . $h . ": " . $basicDecison->getNetValue() . "<br>";      
-
+            echo "Y" .  $h . "<br>";
+            $basicDecison->printInfo();
         }
-        
+        $basicDecison->printInfo();      
         
 
         ?>

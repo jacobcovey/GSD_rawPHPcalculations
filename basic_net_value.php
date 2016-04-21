@@ -109,6 +109,15 @@ class basic_net_value {// Class used for calculating net for users "no grad scho
     {
         $this->netValue = $this->savings - $this->debtBalance;
     }
+    function printInfo()
+    {
+        echo "Current Net Value: $"  .number_format($this->netValue) . "<br>";       
+        echo "Current Monthly Salary: $" .number_format($this->monthlySalary) . "<br>";       
+        echo "Current Monthly Living Expenses: " .number_format($this->monthlyLivingExpense) . "/month<br>";       
+        echo "Current Debt Balance: " .number_format($this->debtBalance) . "<br>";       
+        echo "Current Savings Balance: " .number_format($this->savings) . "<br>";       
+
+    }
     function getOriginalDebtMinimumPayment() 
     {
         return $this->originalDebtMinimumPayment;
