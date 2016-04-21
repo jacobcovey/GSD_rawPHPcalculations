@@ -11,7 +11,7 @@
  *
  * @author jcovey
  */
-class basic_net_value {
+class basic_net_value {// Class used for calculating net for users "no grad school" option
     protected $salary;
     protected $salaryGrothRate;
     protected $originalDebt;
@@ -40,14 +40,14 @@ class basic_net_value {
         //$this->dailyIntrestRate = $this->calcDailyIntrestRate();
         $this->debtBalance = $originalDebt;
         $this->netValue = $this->savings - $this->debtBalance;
-        $this->originalDebtMinimumPayment = $this->originalDebt * (($this->originalIntrestRate/12)/(1-(pow(1+($this->originalIntrestRate/12),-180))));
+        $this->originalDebtMinimumPayment = $this->originalDebt * (($this->originalIntrestRate/12)/(1-(pow(1+($this->originalIntrestRate/12),-180))));//calculate the minimum loan payment and assign result to varaible
         //$this->originalDebtMinimumPayment = pow($originalIntrestRate,3);
         $this->monthlySalary = $this->salary / 12;
         $this->taxObligation = 0;
         $this->taxableIncome = 0;
     }
  
-    function calcTaxObligation()
+    function calcTaxObligation() //Uses federal tax bracket as of April 2016 to calculate the total federal tax obligation
     {
         $this->taxableIncome = $this->salary;
         $this->taxableIncome -= 6300;//standard deduction
@@ -80,7 +80,7 @@ class basic_net_value {
             $this->taxObligation = 118118.75 + (($this->taxableIncome - 406750) * .396);
         }
     }
-    function simulateOneMonth()
+    function simulateOneMonth()// add one years intrest to debt balance. Calculate how much of monthly salary is left over after living expenses and minimum debt payment. Apply remaining money to debt.
     {
         
         $this->debtBalance *= (($this->originalIntrestRate/12)+ 1);
@@ -96,12 +96,12 @@ class basic_net_value {
         }
         $this->calcNetValue();
     }
-    function updateSalary()
+    function updateSalary()//update salary for one year
     {
         $this->salary *= (1+ $this->salaryGrothRate);
         $this->monthlySalary = $this->salary/12;
     }
-    function  updateLivingExpenses()
+    function  updateLivingExpenses()//update living expense for one year
     {
         $this->monthlyLivingExpense *= (1+ $this->livingExpenseGrowthRate);
     }
