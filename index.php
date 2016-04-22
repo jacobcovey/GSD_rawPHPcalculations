@@ -25,6 +25,7 @@ and open the template in the editor.
         $yearlyGradDegreeIncome = 7000;
         $gradSalary = 50000;
         
+        $NVswitch = false;
         
         $disicions = array();
         $basicDecison = new basic_net_value($salary, $salaryGrothRate, $originalDebt, $originalIntrestRate, $monthlyLivingExpense, $livingExpenseGrowthRate);
@@ -40,6 +41,15 @@ and open the template in the editor.
             {
                 $basicDecison->simulateOneMonth();
                 $gradDecision->simulateOneMonth();
+                
+                if (!$NVswitch)
+                {
+                    if ($basicDecison->getNetValue() <= $gradDecision->getNetValue())
+                    {
+                        $NVswitch = true;
+                        $timeUntilNetValueEquals = array($h,$i);
+                    }
+                }
             }
             //updated need varaibles in the basicDecision object
             $basicDecison->updateSalary();           
@@ -53,14 +63,30 @@ and open the template in the editor.
             $gradDecision->updateLivingExpenses();
             $gradDecision->calcTaxObligation();
             
+            /*
             echo "Y " .  $h . " Basic:<br>";
             $basicDecison->printInfo(); 
-            echo "Y " .  $h . " Gad:<br>";
-            $gradDecision->printInfo();    
+            echo "Y " .  $h . " Grad:<br>";
+            $gradDecision->printInfo();  
+             * 
+             */  
         }
-        $basicDecison->printInfo();      
+        echo " Basic:<br>";        
+        $basicDecison->printInfo(); 
+        echo " Grad:<br>";
         $gradDecision->printInfo();
+        echo "At " . $timeUntilNetValueEquals[0] . " Years and " . $timeUntilNetValueEquals[1] . " Months the net values were aproxamently equal.";
 
+        function compareNetValue($basicNV, $gradNV, &$NVswitch, &$timeUntilNetValueEquals)
+        {
+            if (!$NVswitch)
+            {
+                if ($basicNV <= $gradNV)
+                {
+                    
+                }
+            }
+        }
         ?>
     </body>
 </html>
