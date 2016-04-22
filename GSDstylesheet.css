@@ -1,0 +1,205 @@
+#toolbar {
+    position: fixed;
+    height: 60px;
+    top: -5px;
+    right: -5px;
+    left: -5px;
+    background-color: #c9c9c9;
+    z-index: 3;
+    
+}
+#password {
+     margin-left: 420px;
+margin-right: auto;
+    height: 2.5em;
+    width: 16em;
+    border-radius: 5px;
+}
+#logo {
+ position: fixed;
+    height: 60px;
+}
+#calclink {
+    position: absolute;
+    z-index: 3;
+    top: 15px;
+    left: 280px;
+    color: #000044;
+    text-decoration: none;
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+    
+}
+#whatlink {
+    position: absolute;
+    z-index: 3;
+    top: 15px;
+    left: 440px;
+    color: #000044;
+    text-decoration: none;
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+    
+}
+#idlink {
+    position: relative;
+    right: 20px;
+    z-index: 3;
+    top: 22px;
+    color: #000044;
+    text-decoration: none;
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+    float: right;
+}
+#main{
+ position: absolute;
+    top:80px;
+    right: 5px;
+    left: 5px;
+    bottom: 5px;
+    padding-bottom: 60px;   
+}
+#playbox {
+    display: block;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #000044;
+    border-radius: 5px;
+    
+}
+h1 {
+    text-align: center;
+    color: #4682b4;
+    font-family: sans-serif;
+}
+h2 {
+    color:#000044; 
+    font-family: sans-serif;
+}
+.title {
+ font-size: 22px;
+    text-decoration: underline;
+    align-content: center;
+    color:#4682b4; 
+    font-weight: bold;
+    text-align: center;
+    line-height: 10%;
+}
+#carLink {
+    margin-left: 64px;
+
+    width: 90%;
+    color: #4682b4;
+    font-size: 1.1em;
+    line-height: 140%;
+    word-break: keep-all
+}
+.cars {
+ display: block;
+    width: 75%;
+    bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cars1 {
+ display: block;
+    width: 75%;
+    <!--bottom: 50px; -->
+    margin-left: auto;
+    margin-right: auto;
+}  
+.box{
+    margin-top: 10px;
+    margin-right: -30px;
+    float: right;
+}
+.boxleft{
+    margin-top: 10px;
+    margin-right: -30px;
+    float: left;
+}
+.lbl{
+    color: #000044;
+    font-size: 1.25em;
+    line-height: 140%;
+    word-break: keep-all
+}
+.inputBox{
+    display: inline-block;
+   left: 20px;
+    line-height: 200%;
+    color: #000044;
+    font-size: 1.3em;
+}
+#inputBox2{
+    display: inline-block;
+   left: 20px;
+    line-height: 200%;
+    color: #000044;
+    font-size: 1.3em;
+}
+#gas {
+
+ display: block;
+    width: 75%;
+    bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+     line-height: 200%;
+    color: #000044;
+    font-size: 1.3em;
+}
+#submit {
+    display: block;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+    height: 3em;
+    border-radius: 5px;
+    background-color: #c9c9c9;
+}
+#submit1 {
+    visibility: hidden;
+    display: block;
+    margin-top: 5px;
+    margin-left: 450px;
+    margin-right: auto;
+    width: 20em;
+    height: 3em;
+    color: #000044;
+    
+    
+}
+.body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    color: #000044;
+    font-size: 1.1em;
+    line-height: 140%;
+    word-break: keep-all;
+    
+}
+.body1 {
+    color: #000044;
+    font-size: 1.1em;
+    line-height: 140%;
+    text-align: center;
+}
+#footer {
+    position: absolute;
+    margin-top: 0px;
+    height: 40px;
+    bottom: -5px;
+    right: -5px;
+    left: -5px;
+    background-color: #c9c9c9;
+    z-index: 3;
+    
+}

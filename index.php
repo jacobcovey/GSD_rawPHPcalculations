@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Stage 1 Calculator</title>
-    </head>
-    <body>
         <?php
+        include("BasicCalculation.html");
         include("basic_net_value.php");
         include("GS_net_value.php");
         $salary = 40000;
@@ -71,22 +60,10 @@ and open the template in the editor.
              * 
              */  
         }
+        /*
         echo " Basic:<br>";        
         $basicDecison->printInfo(); 
         echo " Grad:<br>";
         $gradDecision->printInfo();
         echo "At " . $timeUntilNetValueEquals[0] . " Years and " . $timeUntilNetValueEquals[1] . " Months the net values were aproxamently equal.";
-
-        function compareNetValue($basicNV, $gradNV, &$NVswitch, &$timeUntilNetValueEquals)
-        {
-            if (!$NVswitch)
-            {
-                if ($basicNV <= $gradNV)
-                {
-                    
-                }
-            }
-        }
-        ?>
-    </body>
-</html>
+        */ 
