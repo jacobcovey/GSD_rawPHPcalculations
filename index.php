@@ -12,6 +12,7 @@ and open the template in the editor.
     <body>
         <?php
         include("basic_net_value.php");
+        include("GS_net_value.php");
         $salary = 40000;
         $salaryGrothRate = .06;
         $originalDebt = 32000;
@@ -22,7 +23,7 @@ and open the template in the editor.
         $yearlyTuition = 15000;
         $gradDegreeLength = 2;
         $yearlyGradDegreeIncome = 7000;
-        $gradSalary = 55000;
+        $gradSalary = 50000;
         
         
         $disicions = array();
@@ -33,6 +34,8 @@ and open the template in the editor.
         $basicDecison->calcTaxObligation();//calculate first years tax obligation
         for ($h = 0; $h < $years; $h++)//years
         {
+            $gradDecision->checkIfGraduated($h);
+
             for ($i = 0; $i < 12; $i ++)//months 
             {
                 $basicDecison->simulateOneMonth();
@@ -42,12 +45,18 @@ and open the template in the editor.
             $basicDecison->updateSalary();           
             $basicDecison->updateLivingExpenses();
             $basicDecison->calcTaxObligation();
-            $gradDecision->updateSalary();           
+           
+            if ($h >= $gradDegreeLength)
+            {
+                $gradDecision->updateSalary();
+            }
             $gradDecision->updateLivingExpenses();
             $gradDecision->calcTaxObligation();
             
-            //echo "Y" .  $h . "<br>";
-            //$basicDecison->printInfo();
+            echo "Y " .  $h . " Basic:<br>";
+            $basicDecison->printInfo(); 
+            echo "Y " .  $h . " Gad:<br>";
+            $gradDecision->printInfo();    
         }
         $basicDecison->printInfo();      
         $gradDecision->printInfo();

@@ -1,5 +1,4 @@
 <?php
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -18,14 +17,14 @@ class basic_net_value {// Class used for calculating net for users "no grad scho
     protected $originalIntrestRate;
     protected $monthlyLivingExpense;
     protected $livingExpenseGrowthRate;
-    private $netValue;
-    private $debtBalance;
-    private $savings;
-    private $taxableIncome;
-    private $taxObligation;
+    protected $netValue;
+    protected $debtBalance;
+    protected $savings;
+    protected $taxableIncome;
+    protected $taxObligation;
     protected $originalDebtMinimumPayment;
-    private $monthlySalary;
-    private $monthLeftOver;
+    protected $monthlySalary;
+    protected $monthLeftOver;
     
     function __construct($salary, $salaryGrothRate, $originalDebt, $originalIntrestRate, $monthlyLivingExpense, $livingExpenseGrowthRate) 
     {
